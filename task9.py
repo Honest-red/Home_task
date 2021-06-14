@@ -1,28 +1,26 @@
 #ДЗ 9. Последовательности целых чисел
 
-
 k_num = 0
 s_num = 0
 n_max = 0
 n_min = 0
 s_arif_num = 0
-n = int(input('input value: '))
+n = 1
 while n != 0:
-    n = int(input('input value: '))
-
     if n > n_max:
         n_max = n
-    if n < n_min:
+    if n < n_max:
         n_min = n
-
+    n = int(input('input value: '))
     k_num += 1
-    s_num += s_num
-    print(n, end='')
-    print()
+    s_num += n
+
+
 else:
     s_arif_num = s_num / k_num
     print('количесво введенных', k_num)
     print('Сумма', s_num)
+    print('Средне арифмет', s_arif_num)
     print('Максимальное', n_max)
     print('Минимальное', n_min)
 
