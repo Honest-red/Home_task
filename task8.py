@@ -4,11 +4,8 @@ n = int(input('input value: '))
 i = 1
 q = 0
 
-while i < n:
-    if i*2 > n:
-        print (n, '   ', q,' ', i, '   2 ** ', q, ' = ', i, sep='')
-        break
+while 2*i < n:
     i *= 2
-    q +=1
-print()
-
+    q += 1
+else:
+    print(n, '   ', q, ' ', i, '   2 ** ', q, ' = ', i, sep='')
