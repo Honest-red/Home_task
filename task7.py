@@ -8,3 +8,7 @@ while i < n:
     print(i ** 2, end=' ')
     i += 1
 print()
+
+
+
+
