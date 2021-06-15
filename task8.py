@@ -4,7 +4,7 @@ n = int(input('input value: '))
 i = 1
 q = 0
 
-while 2*i < n:
+while i*2 <= n:
     i *= 2
     q += 1
 else:
