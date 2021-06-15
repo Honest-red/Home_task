@@ -9,8 +9,6 @@ n = int(input('input value: '))
 n_max = n
 n_min = n
 while n != 0:
-    if n == 0:
-        continue
     if n > n_max:
         n_max = n
     if n < n_min:
