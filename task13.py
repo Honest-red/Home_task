@@ -1,7 +1,9 @@
 #ДЗ 13. Замена символов в строке
 
 st = input('Введите строку:')
-sth = st.replace('h', 'H')
-af = sth.find('H')
-arf = sth.rfind('H')
-print(sth[: af:]+sth[af+1: arf:]+sth[arf+1: :])
+
+af = st.find('h')
+arf = st.rfind('h')
+b = st[af+1: arf:]
+sth = b.replace('h', 'H')
+print(st[: af+1:]+sth+st[arf: :])
