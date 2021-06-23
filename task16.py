@@ -1,4 +1,4 @@
-#ДЗ 14. Ромб 1
+#ДЗ 16. Ромб 1
 
 rows = int(input('Input a high: '))
 cols = rows
