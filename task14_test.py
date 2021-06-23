@@ -1,19 +1,23 @@
-#ДЗ 14. Треугольник 2
+import os
+from time import sleep
 
-rows = int(input('Input a high: '))
-cols = (rows*2)-1
+h = 9
+# l = int(input('Please enter level: '))
 
-for i in range(rows):
-    print(i, end='\t')
-    for j in range(cols):
-        if (
-            i == rows-1
-            or j == rows-i-1
-            or j == rows+i-1
-            or (j >  (rows-i-1) and j < (rows+i))
-        ):
-            print('*  ', end='')
-        else:
-            print('   ', end='')
-    print()
-print()
+for l in range(h // 2):
+
+    for i in range(h):
+        for j in range(h):
+            if (
+                    i == 0
+                    or i == h - 1
+                    or i == j
+                    or j == h - i - 1
+                    # or (j == h // 2 and i > h // 2)
+                    # or (l < i < h // 2 and i <= j <= h - i - 1)
+                    # or (h - (l + 2) < i < h - 1 and h - 1 - i <= j <= i)
+            ):
+                print('* ', end='')
+            else:
+                print('  ', end='')
+        print()
