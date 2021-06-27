@@ -1,23 +1,20 @@
-import os
-from time import sleep
+#ДЗ 16. Ромб 1
 
-h = 9
-# l = int(input('Please enter level: '))
-
-for l in range(h // 2):
-
-    for i in range(h):
-        for j in range(h):
-            if (
-                    i == 0
-                    or i == h - 1
-                    or i == j
-                    or j == h - i - 1
-                    # or (j == h // 2 and i > h // 2)
-                    # or (l < i < h // 2 and i <= j <= h - i - 1)
-                    # or (h - (l + 2) < i < h - 1 and h - 1 - i <= j <= i)
-            ):
-                print('* ', end='')
-            else:
-                print('  ', end='')
-        print()
+#rows = int(input('Input a high: '))
+rows = 9
+cols = rows
+for i in range(rows):
+    print(i, end='\t')
+    for j in range(cols):
+        if (
+            j == (rows//4)-i
+            #j == (rows//2)+i
+            or i == (cols//2)+j
+            #or i == (cols//2)+(cols-1-j)
+            #or (j > (rows//2)-i and j < (rows//2)+i and i <= (rows-1)//2)
+        ):
+            print('*  ', end='')
+        else:
+            print('   ', end='')
+    print()
+print()
