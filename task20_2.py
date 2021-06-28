@@ -1,6 +1,7 @@
-#ДЗ 21. Задача на словари 2
+#ДЗ 20. Задача на словари 1
 
 st = 'file Program Files Python file python Python lessons Git Home task task python file'
+
 d2 = {}
 lst = st.split()
 
