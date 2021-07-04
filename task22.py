@@ -15,7 +15,6 @@ lst = [tup for _ in tup]
 print(lst)
 print(lst[0])
 
-
 #print(d.keys())
 ##for i in d.keys():
   #  a = d.keys(i)

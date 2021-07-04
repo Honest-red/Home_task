@@ -6,3 +6,6 @@
 # for rey, value in d.items() - для переворачивания словарярь его распаковки
 # values ()
 # items ()
+
+
+#dsfsdfsdfsd
