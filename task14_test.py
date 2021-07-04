@@ -1,11 +1,8 @@
-#ДЗ 21. Задача на словари 2
-
-st = 'file Program Files Python file python Python lessons Git Home task task python file'
-d2 = {}
-lst = st.split()
-
-for i in range(len(lst)):
-    d = {i: lst[i]}
-    if st.find(d[i]) != -1:
-        d2[d[i]] = st.count(d[i])
-print(d2)
+#Из словаря в список, в списке уже можно перебирать по индексу
+# get (key, value)
+# keys()
+# фукнция list превратить кортеж в спискок и с ним работать
+# распаковка кортежда в 2 переме5нных a, b = 3, 4
+# for rey, value in d.items() - для переворачивания словарярь его распаковки
+# values ()
+# items ()
