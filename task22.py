@@ -7,28 +7,27 @@ d = {
 }
 d2 = {}
 d3 = {}
-
+i = 0
 for key, value in d.items():
     d2 = dict.fromkeys(value)
     d3.update(d2)
     lst = key
-    #print(type(key))
-    #print(value)
-    #print()
-    #print(d[key])
-    #print(type(lst))
-    #print(value)
-    #print(key)
-    #print(d3)
-    if key in d.keys():
-        #((type(value)))
-        #t = value
-        #rint(t)
-        lst = d.get(key)
-        #for i in range(len(value)):
 
-        d3[lst] = key
-print(d3)
+    lst = d.get(key)
+    lst1 = tuple(lst)
+    print(lst[2])
+
+    #if lst1[i] != -1:
+        #print(lst1)
+        #i += 1
+        #d3[lst1] = key
+    #print(tuple(lst))
+        #print(key)
+    #print(value)
+        #if d3[lst1] == value:
+            #d3[lst1] = key
+
+#print(d3)
         #t = value[i]
             #rint(value, type(t))
             # += 1
