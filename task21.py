@@ -7,18 +7,11 @@ lst = st.split()
 maks = 0
 
 for i in range(len(lst)):
-    if st.find(lst[i]) != -1:
-        d[lst[i]] = st.count(lst[i])
+    d[lst[i]] = st.count(lst[i])
 print(d)
 print()
 for keys, value in d.items():
-    if d.get(keys) > maks:
+    if d.get(keys) > maks and (st.rfind(keys) != 0):
         maks = value
         word = keys
-if st.rfind(keys) != 0:
-    print('Чаще всего встречается слово', word, ', в тексе встречается', maks, 'раза')
-
-#Дан текст состоящий из нескольких строки.
-# Выведите слово, которое в этом тексте встречается чаще всего. Если таких слов несколько, выведите последнее.
-#Задачу необходимо решить с использованием словаря.
-
+print('Чаще всего встречается слово', word, ', в тексе встречается', maks, 'раза')
