@@ -1,22 +1,70 @@
 #ДЗ 22. Инвертирование словаря.
 
+from pprint import pprint
+
 d = {
     'apple': ['malum', 'pomum', 'popula'],
     'fruit': ['baca', 'bacca', 'popum'],
     'punishment': ['malum', 'multa']
 }
 d2 = {}
-d3 = {}
 i = 0
 for key, value in d.items():
-    d2 = dict.fromkeys(value)
-    d3.update(d2)
-    lst = key
+    d2.update(dict.fromkeys(value))
+    for i in range(len(value)):
+        d2.update({value[i]: key})
+pprint(d2)
 
-    lst = d.get(key)
-    lst1 = tuple(lst)
-    print(lst[2])
+    #{'malum': 'punishment',
+    # 'pomum': 'apple',
+    # 'popula': 'apple',
+    # 'baca': 'fruit',
+    # 'bacca': 'fruit',
+    # 'popum': 'fruit',
+    # 'multa': 'punishment'}
 
+
+
+
+
+            # {'malum':  'punishment',
+            #  'pomum':  'apple',
+            #  'popula': 'apple',
+            #  'baca':   'fruit',
+            #  'bacca':  'fruit',
+            #  'popum':  'fruit',
+            #  'multa':  'punishment'}
+
+            #print(value)
+            #print(key)
+            #print(a, type(a))
+            #print(key, type(key))
+            #print()
+        #d4 = {value[i]:key}
+           #print(d4)
+
+
+            #[value] = key
+        #print()
+        #if lst[i] in d3.keys():
+            #print('УРА')
+        #else:
+            #print('NET')
+
+    #print(lst1.append(lst))
+    #print(lst1)
+    #words = lst.split(:)
+    #if words in d2:
+        #d2[words] = 'key'
+        #print('d2', type('malum'))
+    #else:
+        #print('Not')
+    #print(lst[2])
+    #print('LST', lst, type(lst))
+
+    #print('lst1', lst1, type(lst1))
+    #print('d3', d3, type(d3))
+    #print()
     #if lst1[i] != -1:
         #print(lst1)
         #i += 1
@@ -77,4 +125,4 @@ for key, value in d.items():
 #   'apple': ['malum', 'pomum', 'popula'],
 #   'fruit': ['baca', 'bacca', 'popum'],
 #   'punishment': ['malum', 'multa']
-#}
+#}#}
