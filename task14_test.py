@@ -13,10 +13,13 @@ j = 0
 
 for key, value in d.items():
     for i in range(len(value)):
-
+        If d2[value[i]] != 'None'
+        If d2.get(value) != 'None'
+            Print est polychilos
+        Else:
         #str.append(value[i])
 
-        d2.update({value[i]: key})
+            d2.update({value[i]: key})
 pprint(d2)
 
 
