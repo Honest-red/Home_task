@@ -13,7 +13,8 @@ i = 0
 for key, value in d.items():
     for i in range(len(value)):
         d_zn = d2.get(value[i])
-        if d_zn != key and d_zn != None:
+        if d_zn != key and d2.get(value[i], '1') != '1':
+
             lst = d_zn
             lst.append(key)
             d2[value[i]] = lst
