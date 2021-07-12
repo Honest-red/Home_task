@@ -1,25 +1,39 @@
-a = [
-	[34587, 'Learning Python, Mark Lutz', 4, 40.95],
-	[98762, 'Programming Python, Mark Lutz', 5, 56.80],
-	[77226, 'Head First Python, Paul Barry', 3, 32.95],
-	[88112, 'Einfuhrung in Python3, Bernd Klein', 3, 24.99]
-]
-
-from pprint import pprint
+from random import randint
 
 
-
-#fui = lambda a:a[3]*a[2] < 100, [a[0], round((a[3]*a[2]+10))]
-
-rr = list(map(lambda a:a[3]*a[2],a))
-print(rr)
-
-def fun(a):
-	if lambda a:a[3]*a[2] < 100:
-		print()
-	return [a[0], round((a[3]*a[2]+10))]
-
-#lambda t: lambda a:a[3]*a[2] < 100,round(a[3]*a[2]+10)
+m = 5
+lst2 = []
 
 
-print(list(map(fun, a)))
+lst = [[randint(1, 50) for i in range(m)]  for j in range(m)]
+
+#lst = [randint(1, 50) for i in range(m)]
+print(lst)
+
+
+print()
+
+def v_print(lst):
+    for i in range(m):
+        for j in range(m):
+
+            if lst[i][j] < 0b1010:
+                lst2.append(' ' + str(lst[i][j]))
+            else:
+                lst2.append(lst[i][j])
+
+
+            print(lst2[i], end=' ')
+        print(lst2[j])
+
+       # print(' ', end='\n')
+            #lst2.append(lst[i][j])
+            #print(lst2)
+        #print(lst2[i], end='\n')
+        #print('III', i)
+        #print('jjjj', j)
+
+        #print(lst2[j], end='\n')
+print(v_print(lst))
+
+print(lst2)
