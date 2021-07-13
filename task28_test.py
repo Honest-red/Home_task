@@ -9,30 +9,25 @@ lst = [[randint(1, 50) for i in range(m)] for j in range(m)]
 print(lst)
 
 print()
-
-
+# - ПОПРОБОВАТЬ РЕКУРСИЮ!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! что бы Вызывала себя то что происходит с J 5 ряз с каждым
+# елементом двумерного списка, с каждой I.
 def v_print(lsk):
     for i in range(m):
-        for j in range(m):
+        for j in lst[i]:
 
-            if lst[i][j] < 0b1010:
-                lst2.append(' ' + str(lst[i][j]))
+            sum_num = sum([int(m) for m in lst[i]])
+
+            if j < 0b1010:
+                j = str('  ' + str(j))
             else:
-                lst2.append(lst[i][j])
+                j = str(' ' + str(j))
+            print(j)
+            #print(lst[i][j])
+        break
+        lst2.append(sum_num)
 
-            print(lst2[i], end=' ')
-        print(lst2[j])
-
-    # print(' ', end='\n')
-    # lst2.append(lst[i][j])
-    # print(lst2)
-    # print(lst2[i], end='\n')
-    # print('III', i)
-    # print('jjjj', j)
-
-    # print(lst2[j], end='\n')
-
+    return sum_num
 
 print(v_print(lst))
 
-print(lst2)
+#print(lst2)
