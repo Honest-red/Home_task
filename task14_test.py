@@ -1,3 +1,5 @@
+# Вариант с перебором ЛСТ списка по каждому числу но не полной Аккуратностью
+
 from random import randint
 
 m = 5
@@ -12,7 +14,10 @@ print()
 #
 def v_print(lsk):
     for i in range(m):
+
+
         for j in lst[i]:
+            #print(j)
 
             sum_num = sum([int(m) for m in lst[i]])
 
@@ -20,11 +25,22 @@ def v_print(lsk):
                 j = str('  ' + str(j))
             else:
                 j = str(' ' + str(j))
+        #print("{: >10} {: >10} {: >10} {: >10}".format(*lst[i]))
             print(j)
+
+            #print(m * ("{: >10}").format(j))
+
+        #print(' ', end='\t')
+        #print(lst[i])
+        #if len(lst[i]) > m:
+        #    print(j, end='\t')
+        #        print(j, end='\t')
+
+
             #print(lst[i])
 
-        lst2.append(sum_num)
-        break
+        #lst2.append(sum_num)
+        #break
 
     return sum_num
 

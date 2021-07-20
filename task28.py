@@ -1,45 +1,23 @@
+# Вариант с перебором ЛСТ списка по каждому числу но не полной Аккуратностью
+
 from random import randint
 
 m = 5
 lst2 = []
 
 lst = [[randint(1, 50) for i in range(m)] for j in range(m)]
-
-# lst = [randint(1, 50) for i in range(m)]
 print(lst)
-
 print()
-
 
 def v_print(lsk):
     for i in range(m):
-        for j in range(m):
-
-            if lst[i][j] < 0b1010:
-                lst2.append(' ' + str(lst[i][j]))
+        for j in lst[i]:
+            sum_num = sum([int(m) for m in lst[i]])
+            if j < 0b1010:
+                j = str('  ' + str(j))
             else:
-                lst2.append(lst[i][j])
-                #lst2.clear()
-
-            #print(lst2[i], end=' ')
-        sum_num = sum([int(m) for m in lst2])
-        print(lst2[i])
-
-
-
-
-        #print(lst2[j])
+                j = str(' ' + str(j))
+        #print("{: >10} {: >10} {: >10} {: >10}".format(*lst[i]))
+            print(j)
     return sum_num
-    # print(' ', end='\n')
-    # lst2.append(lst[i][j])
-    # print(lst2)
-    # print(lst2[i], end='\n')
-    # print('III', i)
-    # print('jjjj', j)
-
-    # print(lst2[j], end='\n')
-
-
 print(v_print(lst))
-
-print(lst2)
