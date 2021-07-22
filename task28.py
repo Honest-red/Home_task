@@ -1,23 +1,66 @@
-# Вариант с перебором ЛСТ списка по каждому числу но не полной Аккуратностью
+#ДЗ 28. Матрица 1
 
 from random import randint
 
-m = 5
-lst2 = []
 
-lst = [[randint(1, 50) for i in range(m)] for j in range(m)]
-print(lst)
+#M = int(input('Input first matrix size:'))
+M = 5
+lst = [[randint(1, 50) for _ in range(M)] for _ in range(M)]
+tmp_lst = [0] * M
+
+
+def bubble(array, lst1):
+    for i in range(len(array) - 1):
+
+        flag = 1
+        for j in range(len(array) - 1 - i):
+            if array[j] > array[j + 1]:
+                for k in range(M):
+                    lst1[k][j], lst1[k][j + 1] = lst1[k][j + 1], lst1[k][j]
+                array[j], array[j + 1] = array[j + 1], array[j]
+                flag = 0
+        if flag:
+            break
+
+for i in range(M):
+    for j in range(M):
+        tmp_lst[j] += lst[i][j]
+
+        if lst[i][j] < 10:
+            print(' ', lst[i][j], end='\t')
+        else:
+            print('', lst[i][j], end='\t')
+    print('\t')
 print()
 
-def v_print(lsk):
-    for i in range(m):
-        for j in lst[i]:
-            sum_num = sum([int(m) for m in lst[i]])
-            if j < 0b1010:
-                j = str('  ' + str(j))
-            else:
-                j = str(' ' + str(j))
-        #print("{: >10} {: >10} {: >10} {: >10}".format(*lst[i]))
-            print(j)
-    return sum_num
-print(v_print(lst))
+for value in tmp_lst:
+    if value < 100:
+        print('', value, end='\t')
+    else:
+        print(value, end='\t')
+
+
+
+print()
+print()
+print('POSLE SOTRIROVKI ')
+print()
+
+bubble(tmp_lst, lst)
+
+
+for i in range(M):
+    for j in range(M):
+        if lst[i][j] < 10:
+            print(' ', lst[i][j], end='\t')
+        else:
+            print('', lst[i][j], end='\t')
+
+    print('\t')
+print()
+
+for value in tmp_lst:
+    if value < 100:
+        print('', value, end='\t')
+    else:
+        print(value, end='\t')
