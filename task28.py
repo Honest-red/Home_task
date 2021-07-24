@@ -7,6 +7,7 @@ lst = [[randint(1, 50) for _ in range(M)] for _ in range(M)]
 tmp_lst = [0] * M
 print()
 
+
 def bubble(array, lst1):
     for i in range(len(array) - 1):
         for j in range(len(array) - 1 - i):
@@ -34,6 +35,7 @@ def print_lst(lst2):
                 print(' ', lst2[i][j], end='\t')
             else:
                 print('', lst2[i][j], end='\t')
+
         print('\t')
     print()
 

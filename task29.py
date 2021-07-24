@@ -17,8 +17,6 @@ for i in range(M):
             print(' ', lst[i][j], end='\t')
         else:
             print('', lst[i][j], end='\t')
-
-
     print('\t', s)
 print()
 
