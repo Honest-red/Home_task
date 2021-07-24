@@ -1,45 +1,82 @@
-# Вариант с перебором ЛСТ списка по каждому числу но не полной Аккуратностью
+# ПРИМЕР с ошибкой...и
 
 from random import randint
 
-m = 5
-lst2 = []
+# M = int(input('Input first matrix size:'))
+M = 4
+lst = [[randint(1, 50) for _ in range(M)] for _ in range(M)]
+tmp_lst = [0] * M
 
-lst = [[randint(1, 50) for i in range(m)] for j in range(m)]
 
-# lst = [randint(1, 50) for i in range(m)]
-print(lst)
+def bubble(array, lst1):
+    for i in range(len(array) - 1):
+        for j in range(len(array) - 1 - i):
+            if array[j] > array[j + 1]:
+                array[j], array[j + 1] = array[j + 1], array[j]
+                for k in range(M):
+                    lst1[k][j], lst1[k][j + 1] = lst1[k][j + 1], lst1[k][j]
+
+    for w in range(len(lst1)):
+        for u in range(len(lst1) - 1):
+            if w % 2 == 0:
+                print(lst1[u][w])
+                print(lst1[u + 1][w])
+                print()
+                if lst1[u][w] > lst1[u + 1][w]:
+                    lst1[u][w], lst1[u + 1][w] = lst1[u + 1][w], lst1[u][w]
+            else:
+                print('---', lst1[u][w])
+                print('---', lst1[u + 1][w])
+                print()
+                if lst1[u][w] < lst1[u + 1][w]:
+                    lst1[u][w], lst1[u + 1][w] = lst1[u + 1][w], lst1[u][w]
+
+
+# Вывод не сортированной матрицы
+
+for i in range(M):
+    for j in range(M):
+        tmp_lst[j] += lst[i][j]
+
+        if lst[i][j] < 10:
+            print(' ', lst[i][j], end='\t')
+        else:
+            print('', lst[i][j], end='\t')
+    print('\t')
 print()
 
-def v_print(lsk):
-    for i in range(m):
-        # print(lst[i])
-        sum_num = 0
-        for j in range(m):
-            #print(lst[j][i])
+for value in tmp_lst:
+    if value < 100:
+        print('', value, end='\t')
+    else:
+        print(value, end='\t')
 
-            sum_num = sum_num + lst[j][i]
-            #sum_num = sum([int(lst[j][i])])
-            #sum_num = sum(lst[j][i])
-            #print(lst[i][j], end=' ')
-            if sum_num <= 0b1100100:
-                if lst[i][j] < 0b1010:
-                    k = str('   ' + str(lst[i][j]))
-                else:
-                    k = str('  ' + str(lst[i][j]))
-            else:
-                if lst[i][j] < 0b1010:
-                    k = str(' ' + str(lst[i][j]))
-                else:
-                    k = str('' + str(lst[i][j]))
+print()
+print('POSLE SOTRIROVKI ')
+print()
 
-            print(k, end=' ')
-            #print(j, end='')
-        #break
-        lst2.append(sum_num)
+bubble(tmp_lst, lst)
 
-        print()
+# Вывод сортированной матрицы
+for i in range(M):
+    for j in range(M):
+        if lst[i][j] < 10:
+            print(' ', lst[i][j], end='\t')
+        else:
+            print('', lst[i][j], end='\t')
 
-    return lst2
-    # return sum_num
-print(v_print(lst))
+    print('\t')
+print()
+
+for value in tmp_lst:
+    if value < 100:
+        print('', value, end='\t')
+    else:
+        print(value, end='\t')
+print()
+
+
+
+
+
+
