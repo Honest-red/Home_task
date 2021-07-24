@@ -1,22 +1,6 @@
-#Быстрая сортировка/ Сортировка методом хора
+# Быстрая сотрировка Метод Хора
 
 from random import randint
-
-
-m = 10  # rows stroki
-n = 12  # cols stolbchi
-
-tmp_lst = [0*5]  
-lst = [[randint(10, 99) for _ in range(n)] for _ in range(m)]
-
-tmp = '{:5}'
-for i in range(m):
-    s = 0
-    for j in range(n):
-        print(tmp.format(lst[i][j]), end='')
-        s += lst[i][j]
-        tmp_lst[j] += lst[i][j]from random import randint
-# import random
 
 
 def qsort(nums, first_idx, last_idx):
