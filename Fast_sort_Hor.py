@@ -10,10 +10,10 @@ def qsort(nums, first_idx, last_idx):
     i, j = first_idx, last_idx
     middle_value = nums[(first_idx + last_idx) // 2]
     while i <= j:
-        while nums[i] < middle_value:
+        while nums[i] > middle_value:
             i += 1
 
-        while nums[j] > middle_value:
+        while nums[j] < middle_value:
             j -= 1
 
         if i <= j:
