@@ -1,49 +1,50 @@
-# Вариант с перебором ЛСТ списка по каждому числу но не полной Аккуратностью
 
-from random import randint
 
-m = 5
-lst2 = []
+class Student():
 
-lst = [[randint(1, 50) for i in range(m)] for j in range(m)]
+    def __init__(self, name, surname, grades=[]):
+        self.name = name
+        self.surname = surname
+        self.grades = grades
 
-# lst = [randint(1, 50) for i in range(m)]
-print(lst)
+    def Grades(self, x):
+        self.grades = x
 
-print()
+    def Grades_st(self):
+        return self.grades
+
+    def names_st(self):
+        name_st2 = [Student(), Student()]
+        name_st = [0, 2, 'gggg' ]
+        #print(self.name_st)
+
+        return name_st
+
+        #return self.name
+
+st1 = Student('Bob', 'Phhnich')
+
+print(st1.name)
+print(st1.surname)
+print(st1.names_st()[2])
+print(st1.names_st2()[0].name)
+
+#print(st1.St)
+
+# class Group():
+#     def __init__(self, group_st=[]):
+#         self.group_st = group_st
+#         pass# констуктор который создает группу по умолчанию как пустой список
 #
-def v_print(lsk):
-    for i in range(m):
-
-
-        for j in lst[i]:
-            #print(j)
-
-            sum_num = sum([int(m) for m in lst[i]])
-
-            if j < 0b1010:
-                j = str('  ' + str(j))
-            else:
-                j = str(' ' + str(j))
-        #print("{: >10} {: >10} {: >10} {: >10}".format(*lst[i]))
-            print(j)
-
-            #print(m * ("{: >10}").format(j))
-
-        #print(' ', end='\t')
-        #print(lst[i])
-        #if len(lst[i]) > m:
-        #    print(j, end='\t')
-        #        print(j, end='\t')
-
-
-            #print(lst[i])
-
-        #lst2.append(sum_num)
-        #break
-
-    return sum_num
-
-print(v_print(lst))
-
-#print(lst2)
+#     def insert(self): #Метод который позволяет добавить студентов(НЕ атрибуты) в группу. и студент должен добавиться в список студентов группы
+#         pass
+#         #self.group_st =
+#
+#         def display_Group(self):
+#             #for i in range(len(5)):
+#                 # перебираю циклом спсок студентов в котором будут показываться имя и список оценок
+#                 print()
+#                 Student.name_st()
+#                 Student.Grades_st()
+#метод дисплей гроуп который отображает группу студентов на экран (при этом у стедента класа студент, который отображают имя и список оценок)
+#(циклом перебираем список студентов и вызываем методы из студента, методы который выводят на экран.)
