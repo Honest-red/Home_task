@@ -49,10 +49,12 @@ class Student():
 
 
 class Group():
-    def __init__(self):
+    def __init__(self, group_st=[]):
+        self.group = group_st        
         pass# констуктор который создает группу по умолчанию как пустой список
 
-
+    def insert_st(self):
+        self.gruup = appent()
 
     def displayGroup(self):
         for i in range(len(5)):
