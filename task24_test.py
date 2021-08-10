@@ -7,7 +7,6 @@ class Point:
         self.name = tt
         self.lastname == rr
 
-objs = []
 
 while True:
     data = file.readline()
