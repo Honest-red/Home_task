@@ -24,20 +24,20 @@ class Student():
 
 
 class Group():
-<<<<<<< HEAD
+
     def __init__(self):
         self.hillel_group = []
 
     def add_hillel(self):
         self.hillel_group.append(Student())
-=======
+
     def __init__(self, group_st=[]):
         self.group = group_st        
         pass# констуктор который создает группу по умолчанию как пустой список
 
     def insert_st(self):
         self.gruup = appent()
->>>>>>> 91f914168976efdceaad72bde7d15415fc7ae977
+
 
     def display_group(self):
         print('Группа студентов:')
