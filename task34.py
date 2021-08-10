@@ -4,7 +4,6 @@ from random import randint
 
 
 class Student():
-
     def __init__(self, *name):
         self.name = name[0]
         self.sur = name[1]
@@ -20,9 +19,7 @@ class Student():
         return self.gr
 
     def name_st(self):
-
         return self.name + ' ' + self.sur
-
 
 
 class Group():
@@ -57,6 +54,3 @@ while True:
         break
 file.close()
 
-r = Group()
-r.add_hillel()
-print(r.displayGroup())
