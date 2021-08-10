@@ -1,4 +1,5 @@
-# ДЗ 34. Студенты и группы
+#ДЗ 34. Студенты и группы
+
 from random import randint
 
 
@@ -19,31 +20,24 @@ class Student():
         return self.gr
 
     def name_st(self):
+
         return self.name + ' ' + self.sur
 
 
 
 class Group():
-
     def __init__(self):
         self.hillel_group = []
 
     def add_hillel(self):
         self.hillel_group.append(Student())
 
-    def __init__(self, group_st=[]):
-        self.group = group_st        
-        pass# констуктор который создает группу по умолчанию как пустой список
 
-    def insert_st(self):
-        self.gruup = appent()
-
-
-    def display_group(self):
+    def displayGroup(self):
         print('Группа студентов:')
         while True:
-            Student.name_st()
-            Student.grades_st()
+            print(Student().name_st())
+            Student().Grades_st()
 
 
 file = open('src_14.txt', 'rt', encoding='utf-8')
@@ -63,3 +57,6 @@ while True:
         break
 file.close()
 
+r = Group()
+r.add_hillel()
+print(r.displayGroup())
