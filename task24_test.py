@@ -3,7 +3,7 @@ file = open('src_14.txt', 'rt', encoding='utf-8')
 
 class Point:
 
-    def __init__(self, tt=0, rr=0):
+    def __init__(self, *tt, *rr):
         self.name = tt
         self.lastname == rr
 
