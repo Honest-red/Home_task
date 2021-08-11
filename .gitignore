@@ -8,7 +8,7 @@ Testtask
 # C extensions
 *.so
 task14_test.py
-*.txt
+
 # Distribution / packaging
 .Python
 build/
