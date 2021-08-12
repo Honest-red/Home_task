@@ -22,27 +22,6 @@ class Student():
         return self.name + ' ' + self.sur
 
 
-
-
-file = open('src_14.txt', 'rt', encoding='utf-8')
-
-while True:
-    data = file.readline()
-    if data != '':
-        lst = data.split()
-        for i in range(len(lst)):
-            if i > 1:
-                st.grades(lst[i])
-            elif i == 0:
-                st = Student(lst[0], lst[1])
-
-        #print(st.name_st())
-        #print(st.grades_st())
-    else:
-        break
-file.close()
-
-
 class Group():
     def __init__(self, group_name):
         self.group_name = group_name
@@ -55,12 +34,26 @@ class Group():
 
     def displayGroup(self):
         print('Группа студентов:', self.group_name)
-        for i in self.hillel_group:
-            print('fff')
-            Student.name_st()
+        for st in self.hillel_group:
+            print(st.name_st())
 
 
 r = Group('Pomidor')
-r.add_hillel()
+file = open('src_14.txt', 'rt', encoding='utf-8')
+
+while True:
+    data = file.readline()
+    if data != '':
+        lst = data.split()
+        for i in range(len(lst)):
+            if i > 1:
+                st.grades(lst[i])
+            elif i == 0:
+                st = Student(lst[0], lst[1])
+        r.add_hillel(st)
+    else:
+        break
+file.close()
+
+
 r.displayGroup()
-print(r.hillel_group)
